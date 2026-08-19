@@ -1,551 +1,490 @@
-<meta name="author" content="Abdul Mateen"><head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Abdul Mateen | Premium Business</title>
-
-<meta name="description"
-content="Abdul Mateen Business - Premium products, digital services and modern business solutions.">
-
-<meta name="author" content="Abdul Mateen">
-<meta name="robots" content="index, follow">
-
-<link rel="stylesheet" href="css/style.css">
-</head>
-
-<meta name="robots" content="index, follow"><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Abdul Mateen | Premium Business</title>
+  <title>AbdulMateenBusiness | Official Demo</title>
+  <meta name="description" content="AbdulMateenBusiness is a modern demo website showcasing digital services, technology and creative solutions.">
+  <meta name="author" content="Abdul Mateen">
+  <meta name="robots" content="index, follow">
 
-<meta name="description"
-content="Abdul Mateen Business - Premium products, modern technology and exceptional experiences.">
+  <link rel="canonical" href="https://khan0987nasar-prog.github.io/Khan-nasar/">
 
-<link rel="stylesheet" href="css/style.css">
+  <meta property="og:title" content="AbdulMateenBusiness | Official Demo">
+  <meta property="og:description" content="A colorful modern demo website for digital and creative services.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://khan0987nasar-prog.github.io/Khan-nasar/">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #05050b;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* Animated background */
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      filter: blur(100px);
+      z-index: -1;
+      animation: orb 8s ease-in-out infinite alternate;
+    }
+
+    body::before {
+      background: #8a2be2;
+      top: 5%;
+      left: -150px;
+    }
+
+    body::after {
+      background: #00d9ff;
+      right: -150px;
+      bottom: 5%;
+      animation-delay: 2s;
+    }
+
+    @keyframes orb {
+      from {
+        transform: translateY(-30px) scale(1);
+      }
+      to {
+        transform: translateY(50px) scale(1.25);
+      }
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(92%, 950px);
+      padding: 15px 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 50px;
+      background: rgba(10,10,20,.55);
+      backdrop-filter: blur(20px);
+      z-index: 100;
+      box-shadow: 0 15px 50px rgba(0,0,0,.35);
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 18px;
+      background: linear-gradient(
+        90deg,
+        #ff3cac,
+        #784ba0,
+        #2b86c5,
+        #00e5ff,
+        #ff3cac
+      );
+      background-size: 300%;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: gradient 5s linear infinite;
+    }
+
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+      transition: .3s;
+    }
+
+    nav a:hover {
+      color: white;
+      text-shadow: 0 0 15px #8d7cff;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 20px 70px;
+    }
+
+    .hero-box {
+      width: min(950px, 100%);
+      padding: 70px 30px;
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 35px;
+      background: rgba(255,255,255,.045);
+      backdrop-filter: blur(20px);
+      box-shadow:
+        0 30px 100px rgba(0,0,0,.5),
+        inset 0 1px rgba(255,255,255,.12);
+      transform: perspective(1200px) rotateX(2deg);
+      animation: heroFloat 5s ease-in-out infinite;
+    }
+
+    @keyframes heroFloat {
+      0%,100% {
+        transform: perspective(1200px) rotateX(2deg) translateY(0);
+      }
+      50% {
+        transform: perspective(1200px) rotateX(2deg) translateY(-10px);
+      }
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 9px 18px;
+      border-radius: 50px;
+      border: 1px solid rgba(255,255,255,.2);
+      background: rgba(255,255,255,.06);
+      color: #ddd;
+      margin-bottom: 25px;
+      animation: glow 3s ease-in-out infinite;
+    }
+
+    @keyframes glow {
+      50% {
+        box-shadow: 0 0 35px rgba(130,100,255,.3);
+      }
+    }
+
+    h1 {
+      font-size: clamp(45px, 9vw, 95px);
+      line-height: .95;
+      margin-bottom: 28px;
+      letter-spacing: -4px;
+      animation: title 4s ease-in-out infinite;
+    }
+
+    h1 span {
+      display: block;
+      background: linear-gradient(
+        90deg,
+        #ff3cac,
+        #784ba0,
+        #2b86c5,
+        #00e5ff,
+        #7dff9b,
+        #ffcf5c,
+        #ff3cac
+      );
+      background-size: 500%;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: gradient 7s linear infinite;
+    }
+
+    @keyframes gradient {
+      to {
+        background-position: 500% center;
+      }
+    }
+
+    @keyframes title {
+      50% {
+        transform: scale(1.025);
+        text-shadow:
+          0 0 20px rgba(120,100,255,.2),
+          0 20px 50px rgba(0,0,0,.4);
+      }
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: auto;
+      color: #bdbdcc;
+      font-size: 18px;
+    }
+
+    .buttons {
+      margin-top: 35px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      text-decoration: none;
+      color: white;
+      padding: 15px 27px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.2);
+      background: rgba(255,255,255,.06);
+      transition: .35s;
+    }
+
+    .button:hover {
+      transform: translateY(-7px) scale(1.03);
+      box-shadow: 0 20px 40px rgba(100,80,255,.25);
+    }
+
+    .primary {
+      color: #08080d;
+      background: linear-gradient(135deg,#fff,#bcefff);
+    }
+
+    /* Sections */
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 100px 25px;
+    }
+
+    .section-title {
+      font-size: clamp(32px,6vw,55px);
+      margin-bottom: 15px;
+      background: linear-gradient(
+        90deg,
+        #ff7bd5,
+        #8d7cff,
+        #35d8ff,
+        #7dffb2
+      );
+      background-size: 300%;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: gradient 6s linear infinite;
+    }
+
+    .section-text {
+      color: #aaaaba;
+      max-width: 700px;
+      font-size: 17px;
+    }
+
+    /* Cards */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+      gap: 22px;
+      margin-top: 40px;
+    }
+
+    .card {
+      padding: 32px;
+      min-height: 220px;
+      border-radius: 25px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: linear-gradient(
+        145deg,
+        rgba(255,255,255,.09),
+        rgba(255,255,255,.025)
+      );
+      backdrop-filter: blur(15px);
+      box-shadow:
+        0 25px 50px rgba(0,0,0,.3),
+        inset 0 1px rgba(255,255,255,.07);
+      transition: .4s;
+    }
+
+    .card:hover {
+      transform:
+        perspective(900px)
+        translateY(-12px)
+        rotateX(5deg)
+        rotateY(-3deg);
+      border-color: rgba(150,140,255,.6);
+      box-shadow:
+        0 35px 70px rgba(0,0,0,.4),
+        0 0 40px rgba(100,90,255,.15);
+    }
+
+    .icon {
+      font-size: 40px;
+      margin-bottom: 20px;
+      display: inline-block;
+      animation: iconFloat 3s ease-in-out infinite;
+    }
+
+    @keyframes iconFloat {
+      50% {
+        transform: translateY(-8px) rotate(4deg);
+      }
+    }
+
+    .card h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+      background: linear-gradient(
+        90deg,
+        #ff78df,
+        #7db8ff,
+        #7dffca
+      );
+      background-size: 200%;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: gradient 5s linear infinite;
+    }
+
+    .card p {
+      color: #aaaab8;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 50px 20px;
+      border-top: 1px solid rgba(255,255,255,.1);
+      color: #777;
+    }
+
+    @media(max-width:650px) {
+
+      nav {
+        padding: 13px 17px;
+      }
+
+      nav div:last-child {
+        display: none;
+      }
+
+      .hero-box {
+        padding: 55px 20px;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="loader">
-    <div class="loader-logo">AM</div>
-    <div class="loader-bar"></div>
-</div>
+<nav>
+  <div class="logo">AbdulMateenBusiness</div>
 
-<div class="cursor-glow"></div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+  </div>
+</nav>
 
-<header class="header">
+<header class="hero">
 
-    <a href="#home" class="brand">
-        <span class="brand-mark">AM</span>
-        <span>
-            ABDUL <b>MATEEN</b>
-        </span>
-    </a>
+  <div class="hero-box">
 
-    <nav class="nav">
-        <a href="#home">Home</a>
-        <a href="#products">Products</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <div class="badge">✨ Official Demo Website</div>
 
-    <button id="cartBtn" class="cart-btn">
-        🛒
-        <span id="cartCount">0</span>
-    </button>
+    <h1>
+      Welcome to
+      <span>AbdulMateenBusiness</span>
+    </h1>
+
+    <p>
+      A futuristic demo experience combining technology,
+      creativity and modern digital ideas.
+    </p>
+
+    <div class="buttons">
+      <a href="#services" class="button primary">
+        Explore Demo
+      </a>
+
+      <a href="#about" class="button">
+        Discover More
+      </a>
+    </div>
+
+  </div>
 
 </header>
 
-
 <main>
 
-<section id="home" class="hero">
+<section id="about">
 
-    <div class="hero-content">
+  <h2 class="section-title">
+    Built for the Digital Future
+  </h2>
 
-        <div class="eyebrow">
-            <span></span>
-            ABDUL MATEEN BUSINESS
-        </div>
-
-        <h1>
-            Where ideas
-            <span>become extraordinary.</span>
-        </h1>
-
-        <p>
-            Discover a new generation of products,
-            technology and design created for people
-            who expect more.
-        </p>
-
-        <div class="hero-actions">
-
-            <a href="#products" class="btn btn-primary">
-                Explore Collection
-                <span>→</span>
-            </a>
-
-            <a href="#about" class="btn btn-outline">
-                Discover Us
-            </a>
-
-        </div>
-
-        <div class="hero-trust">
-
-            <div>
-                <strong>10K+</strong>
-                <small>Customers</small>
-            </div>
-
-            <div>
-                <strong>50+</strong>
-                <small>Products</small>
-            </div>
-
-            <div>
-                <strong>98%</strong>
-                <small>Satisfaction</small>
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <div class="hero-product">
-
-        <div class="orbit orbit-one"></div>
-        <div class="orbit orbit-two"></div>
-
-        <div class="floating-label label-one">
-            ✦ Premium
-        </div>
-
-        <div class="floating-label label-two">
-            2026 Collection
-        </div>
-
-        <div class="product-stage">
-
-            <div class="product-device">
-
-                <div class="device-glow"></div>
-
-                <div class="device-screen">
-
-                    <div class="screen-logo">
-                        AM
-                    </div>
-
-                    <div class="screen-text">
-                        <small>ABDUL MATEEN</small>
-                        <strong>PREMIUM</strong>
-                    </div>
-
-                </div>
-
-                <div class="device-camera"></div>
-
-            </div>
-
-        </div>
-
-    </div>
+  <p class="section-text">
+    AbdulMateenBusiness is a demonstration platform created
+    to showcase a premium modern business experience with
+    technology, creativity and digital solutions.
+  </p>
 
 </section>
 
-
-<section class="marquee">
-
-    <div>
-        PREMIUM DESIGN
-        <span>✦</span>
-        MODERN TECHNOLOGY
-        <span>✦</span>
-        QUALITY PRODUCTS
-        <span>✦</span>
-        ABDUL MATEEN
-        <span>✦</span>
-    </div>
-
-</section>
-
-
-<section id="products" class="section">
-
-    <div class="section-heading">
-
-        <div class="eyebrow center">
-            OUR COLLECTION
-        </div>
-
-        <h2>
-            Products designed
-            <span>to stand out.</span>
-        </h2>
-
-        <p>
-            Explore our carefully selected collection.
-        </p>
-
-    </div>
-
-
-    <div class="shop-controls">
-
-        <div class="search-box">
-            <span>⌕</span>
-
-            <input
-                id="search"
-                type="search"
-                placeholder="Search products..."
-            >
-        </div>
-
-        <div class="filters">
-
-            <button class="filter active" data-category="all">
-                All
-            </button>
-
-            <button class="filter" data-category="technology">
-                Technology
-            </button>
-
-            <button class="filter" data-category="fashion">
-                Fashion
-            </button>
-
-            <button class="filter" data-category="accessories">
-                Accessories
-            </button>
-
-        </div>
-
-    </div>
-
-
-    <div id="productsGrid" class="products-grid"></div>
-
-</section>
-
-
-<section class="feature-section">
-
-    <div class="feature-text">
-
-        <div class="eyebrow">
-            THE ABDUL MATEEN EXPERIENCE
-        </div>
-
-        <h2>
-            Technology with
-            <span>personality.</span>
-        </h2>
-
-        <p>
-            We believe products should not only work well.
-            They should feel special every time you use them.
-        </p>
-
-        <div class="feature-list">
-
-            <div>
-                <span>01</span>
-                <strong>Premium Quality</strong>
-                <small>Carefully selected products.</small>
-            </div>
-
-            <div>
-                <span>02</span>
-                <strong>Modern Design</strong>
-                <small>Designed for today's world.</small>
-            </div>
-
-            <div>
-                <span>03</span>
-                <strong>Customer First</strong>
-                <small>Your experience matters.</small>
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <div class="feature-visual">
-
-        <div class="glass-orb"></div>
-
-        <div class="floating-product">
-
-            <div class="fp-top"></div>
-
-            <div class="fp-body">
-                <span>AM</span>
-            </div>
-
-            <div class="fp-bottom"></div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section id="about" class="section about">
-
-    <div class="section-heading">
-
-        <div class="eyebrow center">
-            OUR STORY
-        </div>
-
-        <h2>
-            Built around
-            <span>better ideas.</span>
-        </h2>
-
-    </div>
-
-    <div class="about-grid">
-
-        <div class="about-card large">
-
-            <div class="about-icon">✦</div>
-
-            <h3>
-                Abdul Mateen Business
-            </h3>
-
-            <p>
-                A modern business built around quality,
-                innovation and customer experience.
-                Our vision is to bring useful and exciting
-                products to a new generation.
-            </p>
-
-        </div>
-
-        <div class="about-card">
-
-            <strong>10K+</strong>
-            <span>Happy Customers</span>
-
-        </div>
-
-        <div class="about-card">
-
-            <strong>50+</strong>
-            <span>Products</span>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="stats-section">
-
-    <div class="stat">
-        <strong>10K+</strong>
-        <span>Customers</span>
-    </div>
-
-    <div class="stat">
-        <strong>50+</strong>
-        <span>Products</span>
-    </div>
-
-    <div class="stat">
-        <strong>98%</strong>
-        <span>Satisfaction</span>
-    </div>
-
-    <div class="stat">
-        <strong>24/7</strong>
-        <span>Support</span>
-    </div>
-
-</section>
-
-
-<section id="contact" class="contact-section">
-
-    <div class="contact-content">
-
-        <div class="eyebrow center">
-            GET IN TOUCH
-        </div>
-
-        <h2>
-            Let's build something
-            <span>great.</span>
-        </h2>
-
-        <p>
-            Questions, orders or business inquiries?
-            We're ready to hear from you.
-        </p>
-
-        <div class="contact-buttons">
-
-            <a
-                class="btn btn-primary"
-                href="https://wa.me/923335270771"
-                target="_blank">
-
-                WhatsApp Us
-                <span>→</span>
-
-            </a>
-
-            <a
-                class="btn btn-outline"
-                href="mailto:mknasar0987i@gmail.com">
-
-                Email Us
-
-            </a>
-
-        </div>
-
-        <div class="contact-info">
-
-            <div>
-                <small>WhatsApp</small>
-                <strong>0333 5270771</strong>
-            </div>
-
-            <div>
-                <small>Email</small>
-                <strong>mknasar0987i@gmail.com</strong>
-            </div>
-
-        </div>
-
-    </div>
+<section id="services">
+
+  <h2 class="section-title">
+    Explore Our Concepts
+  </h2>
+
+  <div class="cards">
+
+    <article class="card">
+      <div class="icon">🚀</div>
+      <h3>Digital Solutions</h3>
+      <p>
+        Modern digital concepts designed to create
+        engaging online experiences.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="icon">🤖</div>
+      <h3>Technology</h3>
+      <p>
+        Innovative technology ideas exploring the
+        possibilities of the digital world.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="icon">🎨</div>
+      <h3>Creative Design</h3>
+      <p>
+        Visual concepts focused on memorable,
+        interactive and modern experiences.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="icon">🌐</div>
+      <h3>Web Experience</h3>
+      <p>
+        Responsive web concepts designed for
+        phones, tablets and desktop screens.
+      </p>
+    </article>
+
+  </div>
 
 </section>
 
 </main>
 
-
 <footer>
-
-    <div class="footer-brand">
-
-        <span class="brand-mark">AM</span>
-
-        <strong>
-            ABDUL MATEEN
-        </strong>
-
-    </div>
-
-    <p>
-        © 2026 Abdul Mateen Business.
-        All rights reserved.
-    </p>
-
+  <p>© 2026 AbdulMateenBusiness • Demo Website</p>
 </footer>
-
-
-<!-- CART -->
-
-<aside id="cartPanel" class="cart-panel">
-
-    <div class="cart-top">
-
-        <h2>Your Cart</h2>
-
-        <button id="closeCart">
-            ×
-        </button>
-
-    </div>
-
-    <div id="cartItems"></div>
-
-    <div class="cart-bottom">
-
-        <div class="total-row">
-            <span>Total</span>
-            <strong id="cartTotal">
-                Rs. 0
-            </strong>
-        </div>
-
-        <button id="checkoutBtn" class="btn btn-primary full">
-            Checkout
-        </button>
-
-    </div>
-
-</aside>
-
-
-<div id="overlay" class="overlay"></div>
-
-
-<!-- CHECKOUT -->
-
-<div id="checkoutModal" class="modal">
-
-    <div class="checkout">
-
-        <button id="closeCheckout" class="modal-close">
-            ×
-        </button>
-
-        <div class="eyebrow">
-            ORDER DETAILS
-        </div>
-
-        <h2>
-            Complete your order
-        </h2>
-
-        <form id="checkoutForm">
-
-            <input
-                id="customerName"
-                required
-                placeholder="Full name"
-            >
-
-            <input
-                id="customerPhone"
-                required
-                placeholder="Phone number"
-            >
-
-            <textarea
-                id="customerAddress"
-                required
-                placeholder="Delivery address">
-            </textarea>
-
-            <button class="btn btn-primary full">
-                Place Order on WhatsApp
-            </button>
-
-        </form>
-
-    </div>
-
-</div>
-
-
-<script src="js/app.js"></script>
 
 </body>
 </html>
